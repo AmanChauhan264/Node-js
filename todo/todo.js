@@ -23,6 +23,11 @@ const addTask = (task)=>{
     console.log("Task added", task)
 }
 
+const listTasks = ()=>{
+    const tasks = loadTask();
+    tasks.forEach((task, index) => console.log(`${index + 1} - ${task.task}`));
+};
+
 const command = process.argv[2]
 const argument = process.argv[3]
 
